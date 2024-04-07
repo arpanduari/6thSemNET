@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace login_form
+namespace LoginForm
 {
     public partial class Form1 : Form
     {
@@ -17,35 +10,53 @@ namespace login_form
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
+            string username = txtUserName.Text;
+            string password = txtpassword.Text;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(txtUserName.Text == "tusar" && txtpassword.Text == "1234")
+            if (IsValidLogin(username, password))
             {
-                new Form2().Show();
-                this.Hide();
+                OpenMainForm();
             }
             else
             {
-                MessageBox.Show("The username or password you entered is incorrect, try again");
-             txtUserName.Clear();
-             txtpassword.Clear();
-             txtUserName.Focus();
+                ShowInvalidLoginMessage();
+                ClearFields();
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private bool IsValidLogin(string username, string password)
+        {
+            // Replace this with your actual authentication logic
+            return (username == "tusar" && password == "1234");
+        }
+
+        private void OpenMainForm()
+        {
+            Form2 mainForm = new Form2();
+            mainForm.Show();
+            this.Hide();
+        }
+
+        private void ShowInvalidLoginMessage()
+        {
+            MessageBox.Show("The username or password you entered is incorrect. Please try again.", "Invalid Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void ClearFields()
         {
             txtUserName.Clear();
             txtpassword.Clear();
             txtUserName.Focus();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void labelExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
