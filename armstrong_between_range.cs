@@ -24,6 +24,7 @@ class ArmstrongNumbers
                 Console.WriteLine(num + " is Armstrong");
             }
         }
+        Console.WriteLine("Press any key to exit...");
         Console.ReadKey();
     }
 

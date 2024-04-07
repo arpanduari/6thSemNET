@@ -10,6 +10,8 @@ class Program
         int reversedNumber = ReverseNumber(number);
 
         Console.WriteLine("Reversed number: " + reversedNumber);
+        Console.WriteLine("Press any key to exit...");
+        Console.ReadKey();
     }
 
     static int ReverseNumber(int number)
