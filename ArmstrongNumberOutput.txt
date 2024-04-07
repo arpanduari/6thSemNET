@@ -1,0 +1,14 @@
+1 is Armstrong
+2 is Armstrong
+3 is Armstrong
+4 is Armstrong
+5 is Armstrong
+6 is Armstrong
+7 is Armstrong
+8 is Armstrong
+9 is Armstrong
+153 is Armstrong
+370 is Armstrong
+371 is Armstrong
+407 is Armstrong
+1634 is Armstrong

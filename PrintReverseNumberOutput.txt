@@ -1,0 +1,2 @@
+Enter a number: 5342
+Reverse of 5342 is 2435
