@@ -72,11 +72,9 @@ namespace prime
 
         private void button2_Click(object sender, EventArgs e)
         {
-            {
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-            }
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
         }
     }
 }
