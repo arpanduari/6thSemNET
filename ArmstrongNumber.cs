@@ -4,7 +4,7 @@ class ArmstrongNumber
 {
     static void Main(string[] args)
     {
-        printArmStrong(1, 2000);
+        printArmstrong(1, 2000);
     }
 
     static bool checkArmstrong(int num)
@@ -24,7 +24,7 @@ class ArmstrongNumber
         }
         return total == tempNum;
     }
-    static void printArmStrong(int start, int end)
+    static void printArmstrong(int start, int end)
     {
         for (int i = start; i <= end; ++i)
         {
