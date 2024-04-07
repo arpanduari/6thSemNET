@@ -26,11 +26,12 @@ class ArmstrongNumber
     }
     static void printArmstrong(int start, int end)
     {
+        Console.WriteLine($"Armstrong Number from {start} to {end}: ");
         for (int i = start; i <= end; ++i)
         {
             if (checkArmstrong(i))
             {
-                Console.WriteLine($"{i} is Armstrong");
+                Console.Write($"{i} ");
             }
         }
     }
